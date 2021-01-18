@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Дмитрий Никонов](https://up.htmlacademy.ru/htmlcss/30/user/1402655).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Жилин] (https://htmlacademy.ru/profile/andreyka).
 
 ---
 
