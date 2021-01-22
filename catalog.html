@@ -5,7 +5,197 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
-
-   
+    <header>
+      <nav>
+        <a href="index.html">
+          <img src="#" alt="Логотип магазина мороженного «Глейси»">
+        </a>
+        <ul>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="blank.html">Доставка и оплата</a></li>
+          <li><a href="blank.html">О компании</a></li>
+        </ul>
+        <ul>
+          <li><input type="search"></li>
+          <li><a href="blank.html">Вход</a></li>
+          <li><a href="blank.html">Корзина</a></li>
+        </ul>
+          <p>с 10 до 20, ежедневно<br>
+          8 812 450-25-25</p>
+         <!--надо решить вопрос каким тегом оборачивать телефон и время работы в макете не указано что это кликабельный телефон-->
+      </nav>
+    </header>
+    <main>
+      <ul>
+        <li>
+          <a href="index.html">Главная</a>
+        </li>
+        <li>
+          <a href="catalog.html">Каталог</a>
+        </li>
+        <li>
+          Сливочное
+        </li>
+      </ul>
+      <h1>Сливочное мороженое</h1>
+      <!--Уточнить у Андрея как лучше описать h1 как "Каталог мороженого" или как "Сливочное мороженое" и расположение тегов h1 после или до крошек-->
+      <section>
+        <h2>Фильтр товаров</h2>
+        <form method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Сортировка:</legend>
+            <select>
+              <option>По популярности</option>
+              <option>Сначала недорогие</option>
+              <option>Сначала дорогие</option>
+              <option>По жирности</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend>Цена: 100 ₽ – 500 ₽</legend>
+            <!--тут должен быть ползунок цены, в учебных материалах не нашел информации по этому-->
+          </fieldset>
+          <fieldset>
+            <legend>Жирность:</legend>
+            <ul>
+              <li>
+                <input type="radio" name="fat-group" value="0%" id="filter-0%">
+                <label for="filter-0%">0%</label>
+              </li>
+              <li>
+                <input type="radio" name="fat-group" value="10%" id="filter-before-10%" checked>
+                <label for="filter-before-10%">до 10%</label>
+              </li>
+              <li>
+                <input type="radio" name="fat-group" value="30%" id="filter-before-30%">
+                <label for="filter-before-30%">до 30%</label>
+              </li>
+              <li>
+                <input type="radio" name="fat-group" value="30%" id="filter-above-30%">
+                <label for="filter-above-30%"> выше 30%</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Наполнители:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="chocolate" id="filter-filler-chocolate">
+                <label for="filter-filler-chocolate">шоколадные</label>
+              </li>
+              <li>
+                <input type="checkbox" name="sugar" id="filter-filler-sugar" checked>
+                <label for="filter-filler-sugar">сахарные присыпки</label>
+              </li>
+              <li>
+                <input type="checkbox" name="fruits" id="filter-filler-fruits">
+                <label for="filter-filler-fruits">фрукты</label>
+              </li>
+              <li>
+                <input type="checkbox" name="syrups" id="filter-filler-syrups">
+                <label for="filter-filler-syrups">сиропы</label>
+              </li>
+              <li>
+                <input type="checkbox" name="jam" id="filter-filler-jam">
+                <label for="filter-filler-jam">джемы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Применить</button>
+        </form>
+      </section>
+      <section>
+        <h2>Виды сливочного мороженого</h2>
+        <ul>
+          <li>
+            <p><img src="#" alt="Апельсин"><br>310 ₽/кг</p>
+            <a href="blank.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          </li>
+          <li>
+            <p><img src="#" alt="Шоколад"><br>380 ₽/кг</p>
+            <a href="blank.html">Сливочно-кофейное с кусочками шоколада</a>
+          </li>
+          <li>
+            <p><img src="#" alt="Клубника"><br>355 ₽/кг</p>
+            <a href="blank.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          </li>
+          <li>
+            <p><img src="#" alt="Крем-брюле"><br>415 ₽/кг</p>
+            <a href="blank.html">Сливочное крем-брюле с карамельной подливкой</a>
+          </li>
+          <li>
+            <p><img src="#" alt="Брусника"><br>325 ₽/кг</p>
+            <a href="blank.html">Сливочное с брусничным джемом</a>
+          </li>
+          <li>
+            <p><img src="#" alt="Черника"><br>410 ₽/кг</p>
+            <a href="blank.html">Сливочно-черничное с цельными ягодами черники</a>
+          </li>
+          <li>
+            <p><img src="#" alt="Лимон"><br>315 ₽/кг</p>
+            <a href="blank.html">Сливочно-лимонное с карамельной присыпкой</a>
+          </li>
+          <li>
+            <p><img src="#" alt="Шоколадная стружка"><br>320 ₽/кг</p>
+            <a href="blank.html">Сливочное с шоколадной стружкой</a>
+          </li>
+          <li>
+            <p><img src="#" alt="Ваниль"><br>440 ₽/кг</p>
+            <a href="blank.html">Сливочно-ванильное с кусочками шоколада</a>
+          </li>
+          <li>
+            <p><img src="#" alt="Ментол"><br>435 ₽/кг</p>
+            <a href="blank.html">Сливочное с ментоловым сиропом</a>
+          </li>
+          <li>
+            <p><img src="#" alt="Кусочки черного шоколада"><br>355 ₽/кг</p>
+            <a href="blank.html">Сливочное с кусочками черного шоколада</a>
+          </li>
+          <li>
+            <p><img src="#" alt="Мятный сироп"><br>420 ₽/кг</p>
+            <a href="blank.html">Сливочное с мятным сиропом</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a>1</a>
+          </li>
+          <li>
+            <a href="blank.html">2</a>
+          </li>
+          <li>
+            <a href="blank.html">3</a>
+          </li>
+          <li>
+            <a href="blank.html">4</a>
+          </li>
+          <li>
+            <a href="blank.html">5</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <h2>Социальные сети</h2>
+        <ul>
+          <li><a href="#">Фейсбук</a></li>
+          <li><a href="#">Вконтакте</a></li>
+          <li><a href="#">Инстаграм</a></li>
+          <li><a href="#">Твиттер</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Документация</h2>
+        <ul>
+          <li><a href="blank.html">Для поставщиков</a></li>
+          <li><a href="blank.html">О производстве</a></li>
+          <li><a href="blank.html">Наши документы</a></li>
+          <li><a href="blank.html">Экологические стандарты</a></li>
+        </ul>
+      </section>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="#" alt="Логотип HTML Academy"></a><br>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2019</a>
+  </footer>
   </body>
 </html>
