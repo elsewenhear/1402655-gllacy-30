@@ -6,24 +6,23 @@
   </head>
   <body>
     <header>
+      <a href="index.html">
+        <img src="#" alt="Логотип магазина мороженного «Глейси»">
+      </a>
       <nav>
-        <a href="index.html">
-          <img src="#" alt="Логотип магазина мороженного «Глейси»">
-        </a>
         <ul>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="blank.html">Доставка и оплата</a></li>
           <li><a href="blank.html">О компании</a></li>
         </ul>
+      </nav>
         <ul>
-          <li><input type="search"></li>
+          <li><form><input type="search"></form></li>
           <li><a href="blank.html">Вход</a></li>
           <li><a href="blank.html">Корзина</a></li>
         </ul>
-          <p>с 10 до 20, ежедневно<br>
-          8 812 450-25-25</p>
-         <!--надо решить вопрос каким тегом оборачивать телефон и время работы в макете не указано что это кликабельный телефон-->
-      </nav>
+          <p>с 10 до 20, ежедневно<br></p>
+          <a href="tel:88124502525">8 812 450-25-25</a>
     </header>
     <main>
       <ul>
@@ -34,11 +33,10 @@
           <a href="catalog.html">Каталог</a>
         </li>
         <li>
-          Сливочное
+          <a href="#">Сливочное</a>
         </li>
       </ul>
       <h1>Сливочное мороженое</h1>
-      <!--Уточнить у Андрея как лучше описать h1 как "Каталог мороженого" или как "Сливочное мороженое" и расположение тегов h1 после или до крошек-->
       <section>
         <h2>Фильтр товаров</h2>
         <form method="get" action="https://echo.htmlacademy.ru">
@@ -53,26 +51,27 @@
           </fieldset>
           <fieldset>
             <legend>Цена: 100 ₽ – 500 ₽</legend>
+            <div></div>
             <!--тут должен быть ползунок цены, в учебных материалах не нашел информации по этому-->
           </fieldset>
           <fieldset>
             <legend>Жирность:</legend>
             <ul>
               <li>
-                <input type="radio" name="fat-group" value="0%" id="filter-0%">
-                <label for="filter-0%">0%</label>
+                <input type="radio" name="fat-group" value="0" id="filter-0">
+                <label for="filter-0">0%</label>
               </li>
               <li>
-                <input type="radio" name="fat-group" value="10%" id="filter-before-10%" checked>
-                <label for="filter-before-10%">до 10%</label>
+                <input type="radio" name="fat-group" value="0-10" id="filter-before-0-10" checked>
+                <label for="filter-before-0-10">до 10%</label>
               </li>
               <li>
-                <input type="radio" name="fat-group" value="30%" id="filter-before-30%">
-                <label for="filter-before-30%">до 30%</label>
+                <input type="radio" name="fat-group" value="0-30" id="filter-before-0-30">
+                <label for="filter-before-0-30">до 30%</label>
               </li>
               <li>
-                <input type="radio" name="fat-group" value="30%" id="filter-above-30%">
-                <label for="filter-above-30%"> выше 30%</label>
+                <input type="radio" name="fat-group" value="30-100" id="filter-above-30-100">
+                <label for="filter-above-30-100"> выше 30%</label>
               </li>
             </ul>
           </fieldset>
@@ -108,55 +107,71 @@
         <h2>Виды сливочного мороженого</h2>
         <ul>
           <li>
-            <p><img src="#" alt="Апельсин"><br>310 ₽/кг</p>
+            <img src="#" alt="Апельсин"><br>
+            <p>310 ₽<span>/кг</span></p>
+            <!--правильно ли я понимаю, что мне необходимо описать цену тегом <span> так дальше мы сможем изменить его верхний и нижний индекс с помощью CSS?-->
             <a href="blank.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           </li>
           <li>
-            <p><img src="#" alt="Шоколад"><br>380 ₽/кг</p>
+            <img src="#" alt="Шоколад"><br>
+            <p>380 ₽<span>/кг</span></p>
             <a href="blank.html">Сливочно-кофейное с кусочками шоколада</a>
           </li>
           <li>
-            <p><img src="#" alt="Клубника"><br>355 ₽/кг</p>
+            <img src="#" alt="Клубника"><br>
+            <p>355 ₽<span>/кг</span></p>
             <a href="blank.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
           </li>
           <li>
-            <p><img src="#" alt="Крем-брюле"><br>415 ₽/кг</p>
+            <img src="#" alt="Крем-брюле"><br>
+            <p>415 ₽<span>/кг</span></p>
             <a href="blank.html">Сливочное крем-брюле с карамельной подливкой</a>
           </li>
           <li>
-            <p><img src="#" alt="Брусника"><br>325 ₽/кг</p>
+            <img src="#" alt="Брусника"><br>
+            <p>325 ₽<span>/кг</span></p>
             <a href="blank.html">Сливочное с брусничным джемом</a>
           </li>
           <li>
-            <p><img src="#" alt="Черника"><br>410 ₽/кг</p>
+            <img src="#" alt="Черника"><br>
+            <p>410 ₽<span>/кг</span></p>
             <a href="blank.html">Сливочно-черничное с цельными ягодами черники</a>
           </li>
           <li>
-            <p><img src="#" alt="Лимон"><br>315 ₽/кг</p>
+            <img src="#" alt="Лимон"><br>
+            <p>315 ₽<span>/кг</span></p>
             <a href="blank.html">Сливочно-лимонное с карамельной присыпкой</a>
           </li>
           <li>
-            <p><img src="#" alt="Шоколадная стружка"><br>320 ₽/кг</p>
+            <img src="#" alt="Шоколадная стружка"><br>
+            <p>320 ₽<span>/кг</span></p>
             <a href="blank.html">Сливочное с шоколадной стружкой</a>
           </li>
           <li>
-            <p><img src="#" alt="Ваниль"><br>440 ₽/кг</p>
+            <img src="#" alt="Ваниль"><br>
+            <p>440 ₽<span>/кг</span></p>
             <a href="blank.html">Сливочно-ванильное с кусочками шоколада</a>
           </li>
           <li>
-            <p><img src="#" alt="Ментол"><br>435 ₽/кг</p>
+            <img src="#" alt="Ментол"><br>
+            <p>435 ₽<span>/кг</span></p>
             <a href="blank.html">Сливочное с ментоловым сиропом</a>
           </li>
           <li>
-            <p><img src="#" alt="Кусочки черного шоколада"><br>355 ₽/кг</p>
+            <img src="#" alt="Кусочки черного шоколада"><br>
+            <p>355 ₽<span>/кг</span></p>
             <a href="blank.html">Сливочное с кусочками черного шоколада</a>
           </li>
           <li>
-            <p><img src="#" alt="Мятный сироп"><br>420 ₽/кг</p>
+            <img src="#" alt="Мятный сироп"><br>
+            <p>420 ₽<span>/кг</span></p>
             <a href="blank.html">Сливочное с мятным сиропом</a>
           </li>
         </ul>
         <ul>
+          <li>
+            <a href="blank.html"><</a>
+          </li>
           <li>
             <a>1</a>
           </li>
@@ -171,6 +186,9 @@
           </li>
           <li>
             <a href="blank.html">5</a>
+          </li>
+          <li>
+            <a href="blank.html">></a>
           </li>
         </ul>
       </section>
@@ -195,7 +213,7 @@
         </ul>
       </section>
         <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="#" alt="Логотип HTML Academy"></a><br>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2019</a>
+        <span>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</span>
   </footer>
   </body>
 </html>
