@@ -1,0 +1,471 @@
+             @font-face {
+                 font-family: "Roboto";
+                 src: url(../fonts/roboto.woff2) format("woff2"), url(../fonts/roboto.woff) format("woff");
+                 font-weight: 400;
+                 font-style: normal;
+             }
+
+             @font-face {
+                 font-family: "Roboto";
+                 src: url(../fonts/roboto.woff2) format("woff2"), url(../fonts/roboto.woff) format("woff");
+                 font-weight: 500;
+                 font-style: normal;
+             }
+
+             @font-face {
+                 font-family: "Roboto";
+                 src: url(../fonts/roboto.woff2) format("woff2"), url(../fonts/roboto.woff) format("woff");
+                 font-weight: 700;
+                 font-style: normal;
+             }
+
+             @font-face {
+                 font-family: "Roboto bold";
+                 src: url(../fonts/robotobold.woff2) format("woff2"), url(../fonts/robotobold.woff) format("woff");
+                 font-weight: 400;
+                 font-style: normal;
+             }
+
+             @font-face {
+                 font-family: "Roboto bold";
+                 src: url(../fonts/robotobold.woff2) format("woff2"), url(../fonts/robotobold.woff) format("woff");
+                 font-weight: 700;
+                 font-style: normal;
+             }
+
+             @font-face {
+                 font-family: "Roboto medium";
+                 src: url(../fonts/robotomedium.woff2) format("woff2"), url(../fonts/robotomedium.woff) format("woff");
+                 font-weight: 400;
+                 font-style: normal;
+             }
+
+             @font-face {
+                 font-family: "Roboto medium";
+                 src: url(../fonts/robotomedium.woff2) format("woff2"), url(../fonts/robotomedium.woff) format("woff");
+                 font-weight: 700;
+                 font-style: normal;
+             }
+
+             /* Global */
+
+             body {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: 500;
+                 font-size: 16px;
+                 line-height: 22px;
+                 background: #849D8F;
+                 color: #ffffff;
+             }
+
+             img {
+                 max-width: 100%;
+                 height: auto;
+             }
+
+             /* Навигация по сайту */
+
+             .main-navigation {
+                 font-family: Roboto;
+                 font-size: 16px;
+                 line-height: 18px;
+                 color: #ffffff;
+             }
+
+             .main-navigation-link {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: 700;
+                 font-size: 16px;
+                 line-height: 18px;
+                 color: #ffffff;
+             }
+
+             /*  Кнопки навигации эффекты */
+
+             /*.btn {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: 700;
+                 color: #ffffff;
+                 text-align: center;
+             }*/
+
+             /*  Кнопки  */
+
+             .btn {
+                 font-family: Roboto;
+                 color: #ffffff;
+                 font-weight: bold;
+                 text-align: center;
+                 vertical-align: middle;
+                 background-color: #ed5a3c;
+                 border: none;
+             }
+
+             .slider-btn {
+                 font-weight: 700;
+                 font-size: 32px;
+                 font-weight: 44px;
+             }
+
+             .button:hover, .button:focus {
+                 background-color: #f17b64;
+             }
+
+             /*.slider-btn:hover, .slider-btn:focus {
+
+             }*/
+
+             /*.button:active {
+                 background-color: #ed5a3c;
+             }*/
+
+             /*.slider-btn:active {
+
+             }*/
+
+             /* Навигация пользователя */
+
+             .user-navigation-link {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: 500;
+                 font-size: 14px;
+                 line-height: 16px;
+                 color: #ffffff;
+             }
+
+             /* Время работы и телефон*/
+
+             .header-contacts {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: 700;
+                 font-size: 14px;
+                 line-height: 16px;
+             }
+
+             .header-phone {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: 700;
+                 font-size: 22px;
+                 line-height: 24px;
+                 color: #ffffff;
+             }
+
+             /* Карусель*/
+
+             .slider-list {
+                 text-align: center;
+                 list-style: none;
+                 color: #ffffff;
+             }
+
+             .slider-title {
+                 font-family: Roboto;
+                 font-style: normal;
+                 box-align: center;
+                 font-weight: 700;
+                 font-size: 60px;
+                 line-height: 60px;
+                 color: #ffffff;
+             }
+
+             /* Промоакция */
+
+             .offers-list, .user-navigation-list, .main-navigation-list, .advantages-list {
+                 list-style: none;
+             }
+
+             .index-columns {
+                 font-weight: 700;
+                 background-position: center, 0 0;
+                 background-repeat: no-repeat
+             }
+
+             .offers-item-malina {
+                 background: url(../img/index/malina.png);
+                 background-repeat: no-repeat;
+                 width: 560;
+                 height: 229;
+             }
+
+             .offers-item-chocolate {
+                 background: url(../img/index/chocolate.png);
+                 background-repeat: no-repeat;
+                 width: 560;
+                 height: 229;
+             }
+
+             .offers-title {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: bold;
+                 font-size: 35px;
+                 line-height: 41px;
+             }
+
+             .offers-text {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: bold;
+                 font-size: 18px;
+                 line-height: 22px;
+             }
+
+             .offers-btn {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: bold;
+                 font-size: 18px;
+                 line-height: 24px;
+             }
+
+             /* Хиты */
+
+             .hits-list {
+                 display: inline-block;
+                 list-style: none;
+                 vertical-align: top;
+             }
+
+             .hits-link {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: 500;
+                 font-size: 16px;
+                 line-height: 22px;
+                 color: #ffffff;
+             }
+
+             .item-price-product {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: bold;
+                 font-size: 45px;
+                 line-height: 45px;
+             }
+
+             .product-weight {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: bold;
+                 font-size: 30px;
+                 line-height: 35px;
+             }
+
+             /* Преимущества */
+
+             .advantages-shop {
+                 font-family: Roboto;
+                 font-style: normal;
+                 color: #323232;
+                 background-image: url('../img/index/wafer2.png ');
+                 background-repeat: no-repeat;
+             }
+
+             .advantages-text {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: 400;
+                 font-size: 16px;
+                 line-height: 22px;
+             }
+
+             .advantages-shop-title {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: 500;
+                 font-size: 24px;
+                 line-height: 30px;
+             }
+
+             /*.advantages-item {
+                width: 49px;
+                height: 49px;
+              }*/
+
+             .item-icecream {
+                 background-image: url('../img/index/icon_icecream.svg');
+                 background-repeat: no-repeat;
+                 background-position: left;
+             }
+
+             .item-organic {
+                 background-repeat: no-repeat;
+                 background-position: left;
+                 background-image: url('../img/index/icon_organic.svg');
+             }
+
+             .item-cow {
+                 background-repeat: no-repeat;
+                 background-position: left;
+                 background-image: url('../img/index/icon_cow.svg');
+             }
+
+             .item-therm {
+                 background-repeat: no-repeat;
+                 background-position: left;
+                 background-image: url('../img/index/icon_therm.svg');
+             }
+
+             /* Блог и подписка */
+
+             .blog-background-strawberry {
+                 background: url('../img/index/strawberry.png');
+                 width: 560;
+                 height: 220;
+             }
+
+             .offers-item-chocolate {
+                 background: url('../img/index/chocolate.png');
+                 width: 560;
+                 height: 229;
+             }
+
+             .blog-title {
+                 font-family: Roboto;
+                 font-style: normal;
+                 color: #323232;
+                 font-weight: 500;
+                 font-size: 16px;
+                 line-height: 22px;
+             }
+
+             .blog-link {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: bold;
+                 color: #323232;
+                 font-size: 24px;
+                 line-height: 30px;
+             }
+
+             /*  Подписка  */
+
+             .subscription {
+                 width: 560px;
+                 height: 220px;
+                 background-color: #f8f7f4;
+                 background-image: url("../img/index/bg-subscription.png");
+                 background-repeat: no-repeat;
+             }
+
+             .subscription p {
+                 font-family: Roboto;
+                 font-style: normal;
+                 color: #5A5A5A;
+                 ;
+                 font-weight: 400;
+                 font-size: 16px;
+                 line-height: 22px;
+             }
+
+             .subscription input {
+                 font-family: Roboto;
+                 font-weight: bold;
+                 color: #323232;
+                 background-color: #ffffff;
+             }
+
+             /*  Контакты  */
+
+             .contacts {
+                 width: 303px;
+                 height: 306px;
+                 color: #323232;
+                 background-color: #fefefe;
+                 background-repeat: repeat;
+             }
+
+             .contacts b {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: bold;
+                 font-size: 18px;
+                 line-height: 24px;
+             }
+
+             .contacts p {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: normal;
+                 font-size: 14px;
+                 line-height: 20px;
+             }
+
+             .contacts-btn {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: bold;
+                 font-size: 18px;
+                 line-height: 24px;
+             }
+
+             /*  Футер  */
+
+             .footer-social ul {
+                 list-style: none;
+             }
+
+             .footer-info ul {
+                 list-style: none;
+             }
+
+             .footer-info a {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: 400;
+                 font-size: 13px;
+                 line-height: 18px;
+                 color: #FFFFFF;
+             }
+
+             .info-item-heart {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: 700;
+                 font-size: 13px;
+                 line-height: 18px;
+                 color: #FFFFFF;
+             }
+
+             .footer-copyright {
+                 font-size: 12px;
+                 line-height: 1.5em;
+             }
+
+             .copyright-text {
+                 font-family: Roboto;
+                 font-style: normal;
+                 font-weight: normal;
+                 font-size: 12px;
+                 line-height: 18px;
+                 color: #FFFFFF;
+             }
+
+             .footer-copyright a {
+                 color: #FFFFFF;
+             }
+
+             /* Variables */
+
+             :root {
+                 --basic-black: #323232;
+                 --basic-white: #ffffff;
+                 --basic-form-hiddentext: #999999;
+                 --basic-form-input: #D3D3D2;
+                 --basic-btn-substrate: #F26843 0%, #E74A35 100%;
+                 --basic-form-substrate: #F8F7F4;
+                 --basic-substrate-icon: #FFFFFF 20%;
+                 --basic-link: #FFFFFF 30%, #FFBC9E, #E84D37;
+                 --basic-background: #849D8F;
+                 --basic-extra-dark: #242424;
+                 --basic-dark: #aba9a7;
+                 --basic-neutral: #e5e5e5;
+                 --basic-extra-light: #f8f5f2;
+                 --special: #663d15;
+             }
