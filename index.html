@@ -17,31 +17,32 @@
             <img src="img/index/logo.png" width="154" height="64" alt="Логотип магазина мороженного «Глейси»">
         </div>
         <nav class="main-navigation">
-            <ul class="main-navigation-list">
-                <li class="main-navigation-item"><a class="main-navigation-link" href="catalog.html">Каталог</a></li>
-                <li class="main-navigation-item"><a class="main-navigation-link" href="blank.html">Доставка и оплата</a>
+            <ul class="main-site-navigation">
+                <li class="site-navigation-catalog"><a class="site-navigation-link" href="catalog.html">Каталог</a></li>
+                <li class="site-navigation-item"><a class="site-navigation-link" href="blank.html">Доставка и оплата</a>
                 </li>
                 <li class="main-navigation-item"><a class="main-navigation-link" href="blank.html">О компании</a></li>
             </ul>
         </nav>
-        <ul class="user-navigation-list">
-            <li class="user-navigation-item">
-                <img src="img/index/icon_search.svg" width="16" height="16" alt="">
-                <form><input type="search"></form>
+        <ul class="user-navigation">
+                <li class="user-navigation-item-search item-search">
+                    <span>поиск</span>
+                <!--<img src="img/index/icon_search.svg" width="16" height="16" alt="">-->
+                <!--<form><input type="search"></form>-->
             </li>
-            <li class="user-navigation-item">
-                <img src="img/index/icon_exit.svg" width="20" height="19" alt="">
-                <a class="user-navigation-link" href="blank.html">Вход</a>
-            </li>
-            <li class="user-navigation-item">
-                <img src="img/index/icon_shop.svg" width="21" height="20" alt="">
-                <a class="user-navigation-link" href="blank.html">Корзина</a>
-            </li>
-        </ul>
-        <div class="header-contacts">
-            <p>с 10 до 20, ежедневно<br></p>
-            <a class="header-phone" href=" tel:88124502525">8 812 450-25-25</a>
-        </div>
+                <li class="user-navigation-item item-exit">
+                    <!--<img src="img/index/icon_exit.svg" width="20" height="19" alt="">-->
+                    <a class="user-navigation-link" href="blank.html">Вход</a>
+                </li>
+                <li class="user-navigation-item item-busket">
+                    <!--<img src="img/index/icon_shop.svg" width="21" height="20" alt="">-->
+                    <a class="user-navigation-link" href="blank.html">Корзина</a>
+                </li>
+            </ul>
+            <div class="header-contacts">
+                <p>с 10 до 20, ежедневно<br></p>
+                <a class="header-phone" href=" tel:88124502525">8 812 450-25-25</a>
+            </div>
     </header>
     <main class="container">
         <h1>Магазин мороженного «Глейси»</h1>
@@ -78,25 +79,25 @@
         </section>
         <section class="special offers index-columns">
             <h2>Промоакции</h2>
-                <ul class="offers-list">
-                    <li class="offers-item offers-item-malina">
-                        <h3 class="offers-title">Малинка даром!</h3>
-                        <p class="offers-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку
-                            малинового варенья бесплатно.</p>
-                        <a class="btn offers-btn" href="blank.html">Хочу варенье!</a>
-                        <!--<img src="img/index/malina.png" width="560 " height="229 " alt="Фон с малиной ">-->
-                        <!--тут будет распологаться декоративный контент-->
-                    </li>
-                    <li class="offers-item offers-item-chocolate">
-                        <h3 class="offers-title ">Шоколадки даром!</h3>
-                        <p class="offers-text ">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
-                            шоколадной присыпки совершенно бесплатно.
-                        </p>
-                        <a class="btn offers-btn" href="blank.html">Хочу шоколадки!</a>
-                        <!--<img src="img/index/chocolate.png" width="560" height="229" alt="Фон с шоколадом ">-->
-                        <!--тут будет распологаться декоративный контент-->
-                    </li>
-                </ul>
+            <ul class="offers-list">
+                <li class="offers-item offers-item-malina">
+                    <h3 class="offers-title">Малинка даром!</h3>
+                    <p class="offers-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку
+                        малинового варенья бесплатно.</p>
+                    <a class="btn offers-btn" href="blank.html">Хочу варенье!</a>
+                    <!--<img src="img/index/malina.png" width="560 " height="229 " alt="Фон с малиной ">-->
+                    <!--тут будет распологаться декоративный контент-->
+                </li>
+                <li class="offers-item offers-item-chocolate">
+                    <h3 class="offers-title ">Шоколадки даром!</h3>
+                    <p class="offers-text ">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
+                        шоколадной присыпки совершенно бесплатно.
+                    </p>
+                    <a class="btn offers-btn" href="blank.html">Хочу шоколадки!</a>
+                    <!--<img src="img/index/chocolate.png" width="560" height="229" alt="Фон с шоколадом ">-->
+                    <!--тут будет распологаться декоративный контент-->
+                </li>
+            </ul>
         </section>
         <section class="hits">
             <h2>Хит мороженного</h2>
@@ -190,11 +191,11 @@
             </section>
         </section>
         <section class="section">
-        <h2>Карта</h2>
-        <img src="img/index/icon_mapicecream.svg " width="80 " height="140 " alt=" ">
-        <figure class="map">
-        <img src="img/index/map.png " width="1200 " height="430 " alt="Карта ">
-        </figure>
+            <h2>Карта</h2>
+            <img src="img/index/icon_mapicecream.svg " width="80 " height="140 " alt=" ">
+            <figure class="map">
+                <img src="img/index/map.png " width="1200 " height="430 " alt="Карта ">
+            </figure>
         </section>
         <section class="contacts">
             <h2>Форма обратной связи</h2>
@@ -202,12 +203,12 @@
                 Адрес главного офиса<br>
                 и офлайн магазина:<br>
                 <b>ул. Большая Конюшенная<br>
-                 19/8, Санкт-Петербург</b>
+                    19/8, Санкт-Петербург</b>
             </p>
             <p>
                 Для заказов по телефону:<br>
                 <b>8 812 450-25-25</b><br>
-                 (с 10 до 20 ежедневно)
+                (с 10 до 20 ежедневно)
             </p>
             <!--видимо тут придется переделывать блок обратной связи, чтобы оформить текст в CSS-->
             <form><button class="btn contacts-btn" type="submit" formaction="blank.html">Форма обратной
@@ -249,10 +250,10 @@
             </ul>
         </section>
         <section class="footer-copyright">
-        <a class="footer-copyright-btn " href="https://htmlacademy.ru/intensive/htmlcss ">
-            <img src="img/index/icon_logoHTML.png " width="108 " height="39 " alt="Логотип HTML Academy "></a><br>
-        <span class="copyright-text ">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss ">HTML
-                Academy</a> © 2019</span>
+            <a class="footer-copyright-btn " href="https://htmlacademy.ru/intensive/htmlcss ">
+                <img src="img/index/icon_logoHTML.png " width="108 " height="39 " alt="Логотип HTML Academy "></a><br>
+            <span class="copyright-text ">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss ">HTML
+                    Academy</a> © 2019</span>
         </section>
     </footer>
 </body>
