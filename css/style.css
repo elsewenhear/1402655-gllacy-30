@@ -23,64 +23,46 @@
   --br-re: #ac1000;
   --background-catalog:#f7f6f3;
   --product-description: #ffbc9e;
-  -footer-social-list:#e9e9e9;
+  --footer-social-list:#e9e9e9;
+  --focus-link: #e84d37;
 }
 
 @font-face {
-  font-family: "roboto";
-  src: url(../fonts/roboto.woff2) format("woff2"), url(../fonts/roboto.woff) format("woff");
+  font-family: "Roboto";
+  src: local("Roboto"),
+       url(../fonts/roboto.woff2) format("woff2"), 
+       url(../fonts/roboto.woff) format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "roboto";
-  src: url(../fonts/roboto.woff2) format("woff2"), url(../fonts/roboto.woff) format("woff");
+  font-family: "Roboto";
+  src: local("Roboto"),
+       url(../fonts/robotomedium.woff2) format("woff2"),
+       url(../fonts/robotomedium.woff) format("woff");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "roboto";
-  src: url(../fonts/roboto.woff2) format("woff2"), url(../fonts/roboto.woff) format("woff");
+  font-family: "Roboto";
+  src: local("Roboto"),
+       url(../fonts/robotobold.woff2) format("woff2"),
+       url(../fonts/robotobold.woff) format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
-@font-face {
-  font-family: "roboto bold";
-  src: url(../fonts/robotobold.woff2) format("woff2"), url(../fonts/robotobold.woff) format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "roboto bold";
-  src: url(../fonts/robotobold.woff2) format("woff2"), url(../fonts/robotobold.woff) format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "roboto medium";
-  src: url(../fonts/robotomedium.woff2) format("woff2"), url(../fonts/robotomedium.woff) format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "roboto medium";
-  src: url(../fonts/robotomedium.woff2) format("woff2"), url(../fonts/robotomedium.woff) format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
 
 /* Global */
 
 body {
   margin: 0;
   padding: 0;
-  font-family: roboto, arial, sans-serif;
+  font-family: Roboto, arial, sans-serif;
   font-display: swap;
   font-style: normal;
   font-weight: 500;
@@ -152,13 +134,13 @@ img {
 
 /* отключение списка */
 
-.main-site-navigation, .footer-info ul, .footer-social ul, .user-navigation, .slider-list, .offers-list, .user-navigation-list, .main-navigation-list, .advantages-list, .hit-list {
+.site-navigation, .info-list, .footer-social-list, .user-navigation, .slider-list, .offers-list, .user-navigation-list, .main-navigation-list, .advantages-list, .hit-list {
   list-style: none;
 }
 
 /* Навигация пользователя */
 
-.main-site-navigation li a {
+.site-navigation-link {
   display: inline-block;
   padding: 6px 14px;
   font-size: 16px;
@@ -175,23 +157,23 @@ img {
 }
 
 .site-navigation-catalog:active {
-  background: var(--nav-catalog-active);
+  background: var(--nav-active);
   box-shadow: inset 0px 2px 1px #696969;
   border-radius: 26px;
 }
 
-.site-navigation-catalog:hover, .user-navigation li:hover {
+.site-navigation-catalog:hover, .user-navigation-item:hover, .item-search:hover {
   background: var(--nav-hover);
   border-radius: 26px;
 }
 
-.site-navigation-catalog:hover>a, .user-navigation li:hover>a {
+.site-navigation-catalog:hover>.site-navigation-link, .user-navigation-item:hover>.user-navigation-link, .item-search:hover {
   color: black;
 }
 
 .site-navigation-catalog:active {
   border-radius: 26px;
-  background: var(--nav-active);
+  background: var(--nav-catalog-active);
 }
 
 .user-navigation-link {
@@ -209,7 +191,7 @@ img {
   align-items: center;
 }
 
-.user-navigation-item-search {
+.user-navigation-item {
   color: var(--basic-white);
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
@@ -233,11 +215,8 @@ img {
   background-position: left;
 }
 
-.user-navigation li {
-  margin-left: 10px;
-}
 
-.user-navigation>li>a {
+.user-navigation-link {
   display: flex;
   padding: 6px 18px;
   font-size: 14px;
@@ -249,14 +228,17 @@ img {
   border-radius: 20px;
 }
 
-.user-navigation>li>a:hover, .user-navigation>li>a:focus {
-  color: var(--basic-black);
+.user-navigation, .user-navigation:focus {
+  color: var(--basic-white);
   background: var(--white-nav-hover);
+  background-origin: content-box;
 }
 
-.user-navigation-item-search:hover, .user-navigation-item-search>li>a:focus {
+.user-navigation:hover, 
+.user-navigation:focus {
   color: var(--basic-black);
   background: var(--white-nav-hover);
+  background-origin: content-box;
 }
 
 /* Время работы и телефон*/
@@ -272,6 +254,11 @@ img {
   font-size: 22px;
   line-height: 24px;
   color: var(--basic-white);
+}
+
+.header-phone:hover,
+.header-phone:focus {
+  color: var(--product-description);
 }
 
 /* Карусель*/
@@ -334,7 +321,7 @@ img {
 .hit-list {
   text-decoration: none;
 }
-.hit-list li {
+.hit-list-item {
 	position: relative;
 	max-width: 267px;
 	min-width: 210px;
@@ -349,10 +336,7 @@ img {
 	top: 8px;
 	background: url(../img/index/hit_new.png);
 }
-.hit-list li img {
-	border-radius: 50%;
-	margin-bottom: 15px;
-}
+
 .hit-list .product-cost {
 	font-size: 45px;
 	line-height: 45px;
@@ -366,18 +350,23 @@ img {
 	color: var(--basic-white);
 }
 
-.product-description a {
+.product-description {
+	position: relative;
+}
+
+.product-description-link {
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: 500;
 	color: var(--basic-white);
   text-decoration: none;
 }
-.product-description a:hover,
-.product-description a:focus,
-.product-description a:active {
-	color: var(--product-description);
+
+.product-description-link:hover,
+.product-description-link:focus {
+  color: var(--product-description);
 }
+
 .product-overlay {
 	display: flex;
 	position: absolute;
@@ -385,16 +374,13 @@ img {
 	height: calc(100% + 50px);
 	padding: 6px 14px 20px 14px;
 	background: rgba(255, 255, 255, 0.2);
-	border-bottom: solid rgba(255, 255, 255, 0.2);
-	border-radius: 4px;
-	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 	visibility: hidden;
 }
 .product-overlay .product-item-btn {
 	margin-top: auto;
 	max-width: 200px;
 }
-.hit-list li:hover .product-overlay {
+.hit-list-item:hover .product-overlay {
 	visibility: visible;
 }
 
@@ -473,6 +459,11 @@ img {
   line-height: 30px;
 }
 
+.blog-link:hover,
+.blog-link:focus {
+  color: var(--focus-link);
+}
+
 /*  Подписка  */
 
 .subscription {
@@ -483,14 +474,14 @@ img {
   background-repeat: no-repeat;
 }
 
-.subscription p {
+.subscription-info {
   color: var(--basic-subscription);
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
 }
 
-.subscription input {
+.subscription-email {
   font-weight: bold;
   color: var(--basic-black);
   background-color: var(--basic-white);
@@ -506,13 +497,13 @@ img {
   background-repeat: repeat;
 }
 
-.contacts b {
+.contacts-bold {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
 }
 
-.contacts p {
+.contacts-normal {
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
@@ -526,12 +517,17 @@ img {
 
 /*  Футер  */
 
-.footer-info a {
+.info-link {
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-white);
   text-decoration: none;
+}
+
+.info-link:hover,
+.info-link:focus {
+  color: var(--product-description);
 }
 
 .info-item-heart {
@@ -541,29 +537,32 @@ img {
   color: var(--basic-white);
 }
 
-.footer-social-list li a {
+.social-link {
 	display: inline-block;
 	width: 32px;
 	height: 32px;
 	border: 3px solid rgba(255, 255, 255, 0.5);
 	border-radius: 50%;
 }
-.footer-social-list li a:hover path,
-.footer-social-list li a:focus path {
+.social-link:hover,
+.social-link:focus {
 	fill: var(--basic-white);
 	border-color: rgba(255, 255, 255, 0.7);
 }
-.footer-social-list li a:hover,
-.footer-social-list li a:focus,
-.footer-social-list li a:active {
+.social-link:hover,
+.social-link:focus,
+.social-link:active {
 	border-color: rgba(255, 255, 255, 0.7);
 }
-.footer-social-list li a:active path {
+.social-link:active {
 	fill: var(-footer-social-list);
 	border-color: rgba(255, 255, 255, 0.7);
 }
-.footer-copyright a {
+.copyright-link {
   color: var(--basic-white);
+}
+.copyright-link:focus {
+  color: var(--product-description);
 }
 .copyright-text {
   font-size: 12px;
@@ -575,6 +574,7 @@ img {
 }
 
 
+/* состояния ссылок*/
 
 
 
