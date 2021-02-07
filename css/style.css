@@ -134,7 +134,16 @@ img {
 
 /* отключение списка */
 
-.site-navigation, .info-list, .footer-social-list, .user-navigation, .slider-list, .offers-list, .user-navigation-list, .main-navigation-list, .advantages-list, .hit-list {
+.site-navigation, 
+.info-list, 
+.footer-social-list, 
+.user-navigation, 
+.slider-list, 
+.offers-list, 
+.user-navigation-list, 
+.main-navigation-list, 
+.advantages-list, 
+.hit-list {
   list-style: none;
 }
 
@@ -162,12 +171,16 @@ img {
   border-radius: 26px;
 }
 
-.site-navigation-catalog:hover, .user-navigation-item:hover, .item-search:hover {
+.site-navigation-catalog:hover,
+.user-navigation-item:hover, 
+.item-search:hover {
   background: var(--nav-hover);
   border-radius: 26px;
 }
 
-.site-navigation-catalog:hover>.site-navigation-link, .user-navigation-item:hover>.user-navigation-link, .item-search:hover {
+.site-navigation-catalog:hover>.site-navigation-link,
+.user-navigation-item:hover>.user-navigation-link,
+.item-search:hover {
   color: black;
 }
 
@@ -254,12 +267,9 @@ img {
   font-size: 22px;
   line-height: 24px;
   color: var(--basic-white);
+  text-decoration: none;
 }
 
-.header-phone:hover,
-.header-phone:focus {
-  color: var(--product-description);
-}
 
 /* Карусель*/
 
