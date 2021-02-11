@@ -53,7 +53,7 @@
 /* Global */
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: Roboto, arial, sans-serif;
   font-display: swap;
@@ -63,13 +63,11 @@ body {
   line-height: 22px;
   background: var(--basic-background);
   color: var(--basic-white);
-
   /* grid */
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-
 }
 
 img {
@@ -109,8 +107,9 @@ legend {
 
 .main-header {
   display: grid;
-  grid-template-columns: max-content 1fr 1fr;
+  grid-template-columns: max-content repeat(2, 1fr);
   outline-offset: -5px;
+  grid-row-gap: 20px;
 }
 
 .main-navigation {
@@ -118,6 +117,7 @@ legend {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin: 0px;
 }
 
 .main-navigation-link {
@@ -176,11 +176,11 @@ legend {
 /* Навигация пользователя */
 
 .site-navigation {
-	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	max-width: 500px;
-	margin-left: auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  margin-left: auto;
 }
 
 .site-navigation-link {
@@ -328,11 +328,12 @@ legend {
 
 /* Промоакция */
 
-
 .offers-list {
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 26px;
+  column-gap: 26px;
 }
 
 .offers-item-malina {
@@ -366,12 +367,17 @@ legend {
 /* хиты */
 
 .hit-list {
-  display: flex;
+  margin: 0;
+  padding: 0;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 26px;
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
   margin-top: 40px;
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .hit-list-item {
@@ -441,12 +447,18 @@ legend {
 
 /* Преимущества */
 
-.advantages-shop {
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 26px;
+}
 
+.advantages-shop {
   color: var(--basic-black);
   background-image: url('../img/index/wafer2.png ');
   background-repeat: no-repeat;
-
 }
 
 .advantages-text {
@@ -493,10 +505,9 @@ legend {
 
 .blog-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 26px;
 }
-
 
 .blog-background-strawberry {
   background: url('../img/index/strawberry.png');
@@ -529,6 +540,9 @@ legend {
 .blog-link:hover, .blog-link:focus {
   color: var(--focus-link);
 }
+
+/* Карта */
+
 
 /*  Подписка  */
 
@@ -583,14 +597,33 @@ legend {
 
 /*  Футер  */
 
-.main-footer-container {
+.footer-social-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0;
+  padding: 0;
 }
 
-.footer-info{
+.main-footer-container {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
   justify-self: center;
 }
+
+.footer-info {
+  justify-self: center;
+}
+
+.info-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 18px;
+  justify-self: center;
+}
+
 .info-link {
   font-weight: 400;
   font-size: 13px;
@@ -643,6 +676,8 @@ legend {
 }
 
 .footer-copyright {
+	line-height: 18px;
+	max-width: 190px;
   justify-self: end;
   font-size: 12px;
 }
