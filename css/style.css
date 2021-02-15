@@ -53,32 +53,64 @@
 /* Global */
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: Roboto, arial, sans-serif;
   font-display: swap;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   background: var(--basic-background);
   color: var(--basic-white);
-  background-position: top center;
-  background-repeat: no-repeat;
+  /* grid */
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  outline-offset: -5px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+legend {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* grid */
+
+
+
+.container {
+  width: 1146px;
+  margin: 0 auto;
+  padding-top: 9px;
 }
 
 /* Навигация по сайту */
+
+.main-header {
+  display: grid;
+  grid-template-columns: max-content repeat(2, 1fr);
+  grid-row-gap: 20px;
+}
 
 .main-navigation {
   line-height: 18px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin: 0px;
 }
 
 .main-navigation-link {
@@ -92,6 +124,7 @@ img {
   display: inline-block;
   padding: 10px 20px;
   font-size: 18px;
+  line-height: 24px;
   font-weight: 700;
   text-align: center;
   text-shadow: 0px 2px 5px 0px A0200B, 76%;
@@ -128,10 +161,20 @@ img {
 /* отключение списка */
 
 .site-navigation, .info-list, .footer-social-list, .user-navigation, .slider-list, .offers-list, .user-navigation-list, .main-navigation-list, .advantages-list, .hit-list, .pagination-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 /* Навигация пользователя */
+
+.site-navigation {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  margin-left: auto;
+}
 
 .site-navigation-link {
   display: inline-block;
@@ -188,6 +231,7 @@ img {
   line-height: 18px;
   display: flex;
   align-items: center;
+  justify-self: right;
 }
 
 .user-navigation-item {
@@ -241,9 +285,12 @@ img {
 /* Время работы и телефон*/
 
 .header-contacts {
+  width: 1146px;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
+  text-align: right;
+  margin:0 auto;
 }
 
 .header-phone {
@@ -255,6 +302,10 @@ img {
 }
 
 /* Карусель*/
+
+.slider {
+  margin-bottom: 41px;
+}
 
 .slider-list {
   text-align: center;
@@ -271,9 +322,12 @@ img {
 
 /* Промоакция */
 
-.index-columns {
-  font-weight: 700;
-  background-repeat: no-repeat
+.offers-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 26px;
 }
 
 .offers-item-malina {
@@ -307,7 +361,17 @@ img {
 /* хиты */
 
 .hit-list {
+  margin: 0;
+  padding: 0;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 26px;
+  align-items: center;
+  justify-content: space-between;
   text-decoration: none;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .hit-list-item {
@@ -377,6 +441,14 @@ img {
 
 /* Преимущества */
 
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 26px;
+}
+
 .advantages-shop {
   color: var(--basic-black);
   background-image: url('../img/index/wafer2.png ');
@@ -421,6 +493,16 @@ img {
 
 /* Блог и подписка */
 
+.blog-and-subscription {
+  margin-bottom: 40px;
+}
+
+.blog-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 26px;
+}
+
 .blog-background-strawberry {
   background: url('../img/index/strawberry.png');
   width: 560;
@@ -452,6 +534,9 @@ img {
 .blog-link:hover, .blog-link:focus {
   color: var(--focus-link);
 }
+
+/* Карта */
+
 
 /*  Подписка  */
 
@@ -506,6 +591,33 @@ img {
 
 /*  Футер  */
 
+.footer-social-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0;
+  padding: 0;
+}
+
+.main-footer-container {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  justify-self: center;
+}
+
+.footer-info {
+  justify-self: center;
+}
+
+.info-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 18px;
+  justify-self: center;
+}
+
 .info-link {
   font-weight: 400;
   font-size: 13px;
@@ -558,6 +670,9 @@ img {
 }
 
 .footer-copyright {
+	line-height: 18px;
+	max-width: 190px;
+  justify-self: end;
   font-size: 12px;
 }
 
@@ -568,6 +683,7 @@ img {
 .breadcrumbs {
   list-style: none;
   font-size: 14px;
+  font-weight: 400;
   color: var(--basic-white);
 }
 
@@ -577,16 +693,12 @@ img {
   border-bottom: rgba(255, 255, 255, 0.3);
 }
 
-.breadcrumbs-link:hover, 
-.breadcrumbs-link:focus, 
-.breadcrumbs-link:active {
+.breadcrumbs-link:hover, .breadcrumbs-link:focus, .breadcrumbs-link:active {
   color: var(--product-description);
   border-bottom: rgba(249, 172, 159, 0.3);
 }
 
-
 /*  -------Фильтры-------  */
-
 
 .filter-fat-wrapper, .filter-filler-wrapper {
   padding: 9px 14px;
@@ -594,18 +706,21 @@ img {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/*Сортировка*/
+.filter-label {
+  font-size: 16px;
+  line-height: 18px;
+}
 
+/*Сортировка*/
 
 .filter-select {
   padding: 9px 34px 9px 14px;
   font-size: 16px;
+  line-height: 18px;
   color: var(--basic-white);
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
 }
-
-
 
 .filter-select-wrapper:hover, .filter-select-wrapper:focus {
   color: var(--basic-black);
@@ -617,21 +732,13 @@ img {
   background-color: var(--basic-white);
 }
 
-
 /*Фильтр по цене*/
-
-
 
 /*Фильтр по жирности*/
 
-
-
 /*Фильтр по наполнителям*/
 
-
-
 .filter-button {
-
   padding: 7px 27px;
   color: var(--basic-white);
   font-size: 16px;
@@ -651,10 +758,10 @@ img {
 .filter-button:active {
   color: var(--basic-black);
   background-color: var(--nav-catalog-active);
-
 }
 
 /*  Пагинация  */
+
 .pagination-link {
   font-size: 16px;
   font-weight: 500;
@@ -662,13 +769,13 @@ img {
   text-decoration: none;
 }
 
-.pagination-link:hover,
-.pagination-link:focus {
+.pagination-link:hover, .pagination-link:focus {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 .pagination-link:active {
   color: var(--basic-black);
-
   background-color: var(--basic-white);
 }
+
+/* Гриды */
