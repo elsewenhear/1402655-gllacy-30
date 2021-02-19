@@ -55,7 +55,7 @@
 body {
   margin: 0 auto;
   padding: 0;
-  font-family: Roboto, arial, sans-serif;
+  font-family: "Roboto", "Arial", "Sans-serif";
   font-display: swap;
   font-style: normal;
   font-weight: 400;
@@ -160,7 +160,16 @@ legend {
 
 /* отключение списка */
 
-.site-navigation, .info-list, .footer-social-list, .user-navigation, .slider-list, .offers-list, .user-navigation-list, .main-navigation-list, .advantages-list, .hit-list, .pagination-list {
+.site-navigation,
+.info-list, 
+.footer-social-list, 
+.user-navigation, .slider-list, 
+.offers-list, 
+.user-navigation-list, 
+.main-navigation-list, 
+.advantages-list, 
+.hit-list, 
+.pagination-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -174,19 +183,25 @@ legend {
   flex-wrap: wrap;
   max-width: 500px;
   margin-left: auto;
+  padding: 16px 0;
+	margin:0 0 0 24px;
 }
 
 .site-navigation-link {
-  display: inline-block;
+  position: relative;
+	display: inline-block;
+	vertical-align: top;
   padding: 6px 14px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
   color: var(--basic-white);
   text-decoration: none;
+  
 }
 
-.site-navigation-item:hover, .site-navigatition-item:focus {
+.site-navigation-item:hover, 
+.site-navigatition-item:focus {
   background-color: var(--background-catalog);
   border-radius: 26px;
   color: black;
@@ -204,12 +219,16 @@ legend {
   border-radius: 26px;
 }
 
-.site-navigation-item:hover, .user-navigation-item:hover, .item-search:hover {
+.site-navigation-item:hover, 
+.user-navigation-item:hover, 
+.item-search:hover {
   background: var(--nav-hover);
   border-radius: 26px;
 }
 
-.site-navigation-item:hover>.site-navigation-link, .user-navigation-item:hover>.user-navigation-link, .item-search:hover {
+.site-navigation-item:hover>.site-navigation-link, 
+.user-navigation-item:hover>.user-navigation-link, 
+.item-search:hover {
   color: black;
 }
 
@@ -228,10 +247,12 @@ legend {
 /*Пользовательская навигация*/
 
 .user-navigation {
-  line-height: 18px;
   display: flex;
   align-items: center;
   justify-self: right;
+  line-height: 18px;
+  padding: 16px 0;
+	margin:0;
 }
 
 .user-navigation-item {
@@ -341,21 +362,34 @@ legend {
 }
 
 .offers-title {
-  font-weight: bold;
-  font-size: 35px;
-  line-height: 41px;
-}
+	margin: 0;
+	margin-bottom: 18px;
+	font-size: 35px;
+	line-height: 41px;
+	font-weight: 700;
 
-.offers-text {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
+}
+.offers-title p {
+	margin: 0;
+	margin-bottom: 45px;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 700;
+}
+.offers-item {
+	position: relative;
+	max-width: 560px;
+	padding: 17px 20px 20px 20px;
+	margin-right: 3%;
+	border-radius: 20px;
+	box-sizing: border-box;
 }
 
 .offers-btn {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+  float: right;
 }
 
 /* хиты */
@@ -447,6 +481,7 @@ legend {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 26px;
+  
 }
 
 .advantages-shop {
@@ -500,7 +535,7 @@ legend {
 .blog-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 26px;
+  gap: 26px;
 }
 
 .blog-background-strawberry {
@@ -525,7 +560,7 @@ legend {
 }
 
 .blog-link {
-  font-weight: bold;
+  font-weight: 700;
   color: var(--basic-black);
   font-size: 24px;
   line-height: 30px;
@@ -536,7 +571,38 @@ legend {
 }
 
 /* Карта */
+.map {
+	position: relative;
+  width: 1200px;
+  height: 430px;
+  left: 0px;
+}
 
+.contacts {
+	position: absolute;
+	right: 27px;
+	top: 60px;
+  width: 303px;
+  height: 306px;
+	padding: 30px 25px;
+	box-sizing: border-box;
+	font-size: 14px;
+	line-height: 20px;
+  border-radius: 16px;
+  color: var(--basic-black);
+  background-color: var(--background-contacts);
+}
+.contacts-bold {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+}
+.map-icecreame {
+  position: absolute;
+  top: 160px;
+  padding-left: 266px;
+  
+}
 
 /*  Подписка  */
 
@@ -556,7 +622,7 @@ legend {
 }
 
 .subscription-email {
-  font-weight: bold;
+  font-weight: 700;
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
@@ -571,38 +637,24 @@ legend {
   background-repeat: repeat;
 }
 
-.contacts-bold {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.contacts-normal {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.contacts-btn {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
-}
-
 /*  Футер  */
+
+.main-footer {
+  padding-bottom: 30px;
+}
+
+.main-footer-container {
+  margin-top: 18px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
 
 .footer-social-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 0;
   padding: 0;
-}
-
-.main-footer-container {
-  margin-top: 18px;
-  display: grid;
-  grid-template-columns: 1fr 1fr auto;
-  justify-self: center;
 }
 
 .footer-info {
@@ -626,7 +678,10 @@ legend {
   text-decoration: none;
 }
 
-.info-link:hover, .info-link:focus, .copyright-link:hover, .copyright-link:focus {
+.info-link:hover, 
+.info-link:focus, 
+.copyright-link:hover, 
+.copyright-link:focus {
   color: var(--product-description);
 }
 
@@ -650,7 +705,9 @@ legend {
   border-color: rgba(255, 255, 255, 0.7);
 }
 
-.social-link:hover, .social-link:focus, .social-link:active {
+.social-link:hover, 
+.social-link:focus, 
+.social-link:active {
   border-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -670,10 +727,14 @@ legend {
 }
 
 .footer-copyright {
-	line-height: 18px;
-	max-width: 190px;
+  display: grid;
   justify-self: end;
+	line-height: 18px;
   font-size: 12px;
+}
+
+.footer-copyright a {
+  
 }
 
 /*  -------Страница каталога-------  */
@@ -779,3 +840,4 @@ legend {
 }
 
 /* Гриды */
+
