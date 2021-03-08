@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
@@ -10,7 +9,6 @@
   <link rel="icon" href="img/favicon/favicon_152.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
 </head>
-
 <body class="page-body bg-1">
   <!-- HEADER -->
   <header class="main-header container">
@@ -116,13 +114,11 @@
       <a href="tel:+78124502525" aria-label="Позвонить нам по телефону">8 812 450-25-25</a>
     </p>
   </header>
-  <main class="container">
+  <main class="main-index container">
     <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
     <section class="promo-slider">
       <h2 class="visually-hidden">Промо товары</h2>
-
       <ul class="slider-list">
-
         <li class="slider-item slide-current">
           <h3 class="slider-title">
             Пломбир с помадкой<br>и клубничный щербет</h3>
@@ -149,18 +145,18 @@
         <button class="button-3" type="button" aria-label="Третий слайд"></button>
       </div>
     </section>
-    <section>
+    <section class="offers container">
       <h2 class="visually-hidden">Промоакции</h2>
       <ul class="offers-list">
         <li class="offers-item offers-item-malina">
           <h3 class="offers-title">Малинка даром!</h3>
-          <p class="offers-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку
+          <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку
             малинового варенья бесплатно.</p>
           <a class="btn offers-btn" href="blank.html">Хочу варенье!</a>
         </li>
         <li class="offers-item offers-item-chocolate">
           <h3 class="offers-title">Шоколадки даром!</h3>
-          <p class="offers-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
+          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
             шоколадной присыпки совершенно бесплатно.</p>
           <a class="btn offers-btn" href="blank.html">Хочу шоколадки!</a>
         </li>
@@ -243,8 +239,9 @@
       </ul>
     </section>
     <section class="advantages-shop">
-      <h2 class="advantages-shop-title">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого
-        собственного производства на развес</h2>
+      <h2 class="visually-hidden">Наши преимущества</h2>
+      <p class="advantages-shop-title">Магазин Глэйси &ndash; это онлайн и офлайн-магазин по продаже мороженого
+        собственного производства на развес</p>
       <ul class="advantages-list">
         <li class="advantages-item item-icecream">
           <p class="advantages-text">Все наше мороженое изготавливается на собственном производстве, с
@@ -266,44 +263,50 @@
         </li>
       </ul>
     </section>
-    <section class="blog-and-subscription">
-      <h2>Блог и подписка на рассылку</h2>
-      <div class="blog-wrapper">
-        <article class="blog blog-background-strawberry">
-          <h3>Блог магазина «Глейси»</h3>
-          <p class="blog-title ">Новое в нашем блоге</p>
-          <a class="blog-link" href="blank.html ">10 способов сервировки фруктовых щербетов к столу</a>
-        </article>
-        <section class="subscription">
-          <h3 class="visually-hidden">Подписка на рассылку</h3>
-          <p class="subscription-info ">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого
+    <div class="blog-and-subscribe">
+      <!-- Article -->
+      <article class="blog-article">
+        <h2 class="visually-hidden">Наш блог</h2>
+        <p>Новое в нашем блоге</p>
+        <h3 class="blog-link"><a href="#">10 способов сервировки фруктовых щербетов к<br>столу</a></h3>
+      </article>
+      <!-- Subscribe -->
+      <section class="subscription">
+        <h2 class="visually-hidden">Подписаться на рассылку</h2>
+        <form class="form form-subscription" action="https://echo.htmlacademy.ru" method="GET">
+          <p class="subscription-lead">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого
             вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <form class="subscription-form" action="# " method="post ">
-            <input class="subscription-email" type="email " placeholder="email@example.com ">
-            <button class="btn subscription-btn " type="submit ">Отправить</button>
-          </form>
-        </section>
+          <p class="subscription-confirm">
+            <label for="subscription-email-input" class="visually-hidden">Ваша электронная почта для подписки на
+              рассылку</label>
+            <input class="input input-subscription" type="email" name="subscription-email" id="subscription-email-input"
+              placeholder="email@example.com" required>
+            <button class="btn" type="submit" aria-label="Подписаться на рассылку">Отправить</button>
+          </p>
+        </form>
+      </section>
+    </div>
+      <!-- CONTACTS -->
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1614107507918!5m2!1sru!2sru" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" allowfullscreen="" loading="lazy"></iframe>
+        <div class="contacts-container container">
+          <section class="contacts">
+            <div class="contacts-info">
+              <h2 class="visually-hidden">Как нас найти</h2>
+              <p>
+                <span>Адрес главного офиса<br> и офлайн-магазина:</span>
+                <span class="contacts-address">ул. Большая Конюшенная,<br> 19/8, Санкт-Петербург</span>
+              </p>
+              <p>
+                <span>Для заказов по телефону:</span>
+                <a class="contacts-phone" aria-label="Позвоните нам по телефону" href="tel:+78124502525">8 812 450-25-25</a>
+                <span>(с 10 до 20 ежедневно)</span>
+              </p>
+              <a class="btn feedback-link" href="">Форма обратной связи</a>
+            </div>
+          </section>
+        </div>
       </div>
-    </section>
-    <section class="map">
-      <h2>Карта</h2>
-      <img src="img/index/map.png " alt="Карта">
-      <div class="map-icecreame"><img src="img/index/icon_mapicecream.svg" width="80" height="140" alt=""></div>
-      <div class="contacts">
-        <p>
-          Адрес главного офиса<br>
-          и офлайн магазина:<br>
-          <b class="contacts-bold">ул. Большая Конюшенная<br>
-            19/8, Санкт-Петербург</b><br>
-        </p>
-        <p>
-          Для заказов по телефону:<br>
-          <b class="contacts-bold">8 812 450-25-25</b><br>
-          (с 10 до 20 ежедневно)
-        </p>
-        <a class="btn contacts-btn" href="blank.html" formaction="blank.html">Форма обратной связи</a>
-      </div>
-    </section>
   </main>
   <footer class="main-footer container">
     <section class="social">
