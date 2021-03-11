@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body class="catalog-body">
+<body class="page-body">
   <!-- HEADER -->
   <header class="main-header container">
     <div class="navigation-wrapper">
@@ -176,96 +176,105 @@
     <section>
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
-          <!-- filter: select -->
-          <fieldset class="select">
-            <legend>Сортировка:</legend>
-            <div class="filter-wrapper wrapper-select">
-              <select class="filter-select" name="group-sorting">
-                <option value="popularity">по популярности</option>
-                <option value="price-up">сначала недорогие</option>
-                <option value="price-down">сначала дорогие</option>
-                <option value="fat-content">по жирности</option>
-              </select>
+        <!-- filter: select -->
+        <fieldset class="select">
+          <legend>Сортировка:</legend>
+          <div class="filter-wrapper wrapper-select">
+            <select class="filter-select" name="group-sorting">
+              <option value="popularity">по популярности</option>
+              <option value="price-up">сначала недорогие</option>
+              <option value="price-down">сначала дорогие</option>
+              <option value="fat-content">по жирности</option>
+            </select>
+          </div>
+        </fieldset>
+        <!-- filter: price -->
+        <fieldset class="filter-price">
+          <legend>
+            <span>Цена:</span>
+            <label><input class="input-price" type="text" name="min-price" value="100"><span>&#8381; –</span></label>
+            <label><input class="input-price" type="text" name="max-price" value="500"><span>&#8381;</span></label>
+          </legend>
+          <div class="filter-wrapper range-controls">
+            <div class="scale">
+              <div class="bar" style="width: 50%; margin-left: 20px;"></div>
             </div>
-          </fieldset>
-          <!-- filter: price -->
-          <fieldset class="filter-price">
-            <legend>
-              <span>Цена:</span>
-              <label><input class="input-price" type="text" name="min-price" value="100"><span>&#8381; –</span></label>
-              <label><input class="input-price" type="text" name="max-price" value="500"><span>&#8381;</span></label>
-            </legend>
-            <div class="filter-wrapper range-controls">
-              <div class="scale">
-                <div class="bar" style="width: 50%; margin-left: 20px;"></div>
-              </div>
-              <button type="button" class="toggle toggle-min" aria-label="фильтр цены: начальная цена" style="left: 34px;"></button>
-              <button type="button" class="toggle toggle-max" aria-label="фильтр цены: конечная цена" style="left: 132px;"></button>
-            </div>
-          </fieldset>
-          <!-- filter: fat -->
-          <fieldset class="radio">
-            <legend>Жирность:</legend>
-            <div class="filter-wrapper">
-              <ul class="filter-radio">
-                <li>
-                  <input class="filter-input-radio visually-hidden" type="radio" name="fat-content" id="fat-zero" value="zero">
-                  <label for="fat-zero">0%</label>
-                </li>
-                <li>
-                  <input class="filter-input-radio visually-hidden" type="radio" name="fat-content" id="fat-ten" value="ten" checked>
-                  <label for="fat-ten">до 10%</label>
-                </li>
-                <li>
-                  <input class="filter-input-radio visually-hidden" type="radio" name="fat-content" id="fat-less-thirty" value="less-thirty">
-                  <label for="fat-less-thirty">до 30%</label>
-                </li>
-                <li>
-                  <input class="filter-input-radio visually-hidden" type="radio" name="fat-content" id="fat-more-thirty" value="more-thirty">
-                  <label for="fat-more-thirty">выше 30%</label>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
-          <!-- filter: topping -->
-          <fieldset class="checkbox">
-            <legend>Наполнители:</legend>
-            <div class="filter-wrapper">
-              <ul class="filter-checkbox">
-                <li>
-                  <input class="filter-input-checkbox visually-hidden" type="checkbox" name="chocolate" id="filter-chocolate" checked>
-                  <label for="filter-chocolate">шоколадные</label>
-                </li>
-                <li>
-                  <input class="filter-input-checkbox visually-hidden" type="checkbox" name="sugar" id="filter-sugar" checked>
-                  <label for="filter-sugar">сахарные присыпки</label>
-                </li>
-                <li>
-                  <input class="filter-input-checkbox visually-hidden" type="checkbox" name="fruits" id="filter-fruits">
-                  <label for="filter-fruits">фрукты</label>
-                </li>
-                <li>
-                  <input class="filter-input-checkbox visually-hidden" type="checkbox" name="syrup" id="filter-syrup">
-                  <label for="filter-syrup">сиропы</label>
-                </li>
-                <li>
-                  <input class="filter-input-checkbox visually-hidden" type="checkbox" name="jam" id="filter-jam">
-                  <label for="filter-jam">джемы</label>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
-          <!-- filter: button -->
-          <button class="filter-button" type="submit" aria-label="Применить параметры фильтра">Применить</button>
-        </form>
-      </section>   
+            <button type="button" class="toggle toggle-min" aria-label="фильтр цены: начальная цена"
+              style="left: 34px;"></button>
+            <button type="button" class="toggle toggle-max" aria-label="фильтр цены: конечная цена"
+              style="left: 132px;"></button>
+          </div>
+        </fieldset>
+        <!-- filter: fat -->
+        <fieldset class="radio">
+          <legend>Жирность:</legend>
+          <div class="filter-wrapper">
+            <ul class="filter-radio">
+              <li>
+                <input class="filter-input-radio visually-hidden" type="radio" name="fat-content" id="fat-zero"
+                  value="zero">
+                <label for="fat-zero">0%</label>
+              </li>
+              <li>
+                <input class="filter-input-radio visually-hidden" type="radio" name="fat-content" id="fat-ten"
+                  value="ten" checked>
+                <label for="fat-ten">до 10%</label>
+              </li>
+              <li>
+                <input class="filter-input-radio visually-hidden" type="radio" name="fat-content" id="fat-less-thirty"
+                  value="less-thirty">
+                <label for="fat-less-thirty">до 30%</label>
+              </li>
+              <li>
+                <input class="filter-input-radio visually-hidden" type="radio" name="fat-content" id="fat-more-thirty"
+                  value="more-thirty">
+                <label for="fat-more-thirty">выше 30%</label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+        <!-- filter: topping -->
+        <fieldset class="checkbox">
+          <legend>Наполнители:</legend>
+          <div class="filter-wrapper">
+            <ul class="filter-checkbox">
+              <li>
+                <input class="filter-input-checkbox visually-hidden" type="checkbox" name="chocolate"
+                  id="filter-chocolate" checked>
+                <label for="filter-chocolate">шоколадные</label>
+              </li>
+              <li>
+                <input class="filter-input-checkbox visually-hidden" type="checkbox" name="sugar" id="filter-sugar"
+                  checked>
+                <label for="filter-sugar">сахарные присыпки</label>
+              </li>
+              <li>
+                <input class="filter-input-checkbox visually-hidden" type="checkbox" name="fruits" id="filter-fruits">
+                <label for="filter-fruits">фрукты</label>
+              </li>
+              <li>
+                <input class="filter-input-checkbox visually-hidden" type="checkbox" name="syrup" id="filter-syrup">
+                <label for="filter-syrup">сиропы</label>
+              </li>
+              <li>
+                <input class="filter-input-checkbox visually-hidden" type="checkbox" name="jam" id="filter-jam">
+                <label for="filter-jam">джемы</label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+        <!-- filter: button -->
+        <button class="filter-button" type="submit" aria-label="Применить параметры фильтра">Применить</button>
+      </form>
+    </section>
     <section>
       <h2 class="visually-hidden">Каталог сливочного мороженого</h2>
       <ul class="catalog-list page-catalog">
         <li class="catalog-item">
           <h3 class="catalog-item-title"><a href="#">Сливочное с&nbsp;апельсиновым джемом и цитрусовой стружкой</a></h3>
           <div class="item-image-price">
-            <img class="item-pic" src="img/index/icehit_1.png" width="267" height="267" alt="Фото мороженого: сливочное с апельсиновым джемом">
+            <img class="item-pic" src="img/index/icehit_1.png" width="267" height="267"
+              alt="Фото мороженого: сливочное с апельсиновым джемом">
             <p>310 &#8381;<span class="kilo">/кг</span></p>
           </div>
           <a class="btn quick-view" aria-label="Больше информации об этом мороженом" href="#">Быстрый просмотр</a>
@@ -273,7 +282,8 @@
         <li class="catalog-item">
           <h3 class="catalog-item-title"><a href="#">Сливочно-кофейное с&nbsp;кусочками шоколада</a></h3>
           <div class="item-image-price">
-            <img class="item-pic" src="img/index/icehit_2.png" width="267" height="267" alt="Фото мороженого: сливочно-кофейное">
+            <img class="item-pic" src="img/index/icehit_2.png" width="267" height="267"
+              alt="Фото мороженого: сливочно-кофейное">
             <p>380 &#8381;<span class="kilo">/кг</span></p>
           </div>
           <a class="btn quick-view" aria-label="Больше информации об этом мороженом" href="#">Быстрый просмотр</a>
@@ -281,7 +291,8 @@
         <li class="catalog-item">
           <h3 class="catalog-item-title"><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
           <div class="item-image-price">
-            <img class="item-pic" src="img/index/icehit_3.png" width="267" height="267" alt="Фото мороженого: сливочно-клубничное">
+            <img class="item-pic" src="img/index/icehit_3.png" width="267" height="267"
+              alt="Фото мороженого: сливочно-клубничное">
             <p>355 &#8381;<span class="kilo">/кг</span></p>
           </div>
           <a class="btn quick-view" aria-label="Больше информации об этом мороженом" href="#">Быстрый просмотр</a>
@@ -289,7 +300,8 @@
         <li class="catalog-item">
           <h3 class="catalog-item-title"><a href="#">Сливочное крем-брюле с&nbsp;карамельной подливкой</a></h3>
           <div class="item-image-price">
-            <img class="item-pic" src="img/index/icehit_4.png" width="267" height="267" alt="Фото мороженого: сливочное крем-брюле">
+            <img class="item-pic" src="img/index/icehit_4.png" width="267" height="267"
+              alt="Фото мороженого: сливочное крем-брюле">
             <p>415 &#8381;<span class="kilo">/кг</span></p>
           </div>
           <a class="btn quick-view" aria-label="Больше информации об этом мороженом" href="#">Быстрый просмотр</a>
@@ -297,7 +309,8 @@
         <li class="catalog-item">
           <h3 class="catalog-item-title"><a href="#">Сливочное с&nbsp;брусничным<br> джемом</a></h3>
           <div class="item-image-price">
-            <img class="item-pic" src="img/catalog/icecream_lingonberry.png" width="267" height="267" alt="Фото мороженого: сливочное с брусничным джемом">
+            <img class="item-pic" src="img/catalog/icecream_lingonberry.png" width="267" height="267"
+              alt="Фото мороженого: сливочное с брусничным джемом">
             <p>325 &#8381;<span class="kilo">/кг</span></p>
           </div>
           <a class="btn quick-view" aria-label="Больше информации об этом мороженом" href="#">Быстрый просмотр</a>
@@ -305,7 +318,8 @@
         <li class="catalog-item">
           <h3 class="catalog-item-title"><a href="#">Сливочно-черничное с&nbsp;цельными ягодами черники </a></h3>
           <div class="item-image-price">
-            <img class="item-pic" src="img/catalog/icecream_blueberry.png" width="267" height="267" alt="Фото мороженого: сливочно-черничное">
+            <img class="item-pic" src="img/catalog/icecream_blueberry.png" width="267" height="267"
+              alt="Фото мороженого: сливочно-черничное">
             <p>410 &#8381;<span class="kilo">/кг</span></p>
           </div>
           <a class="btn quick-view" aria-label="Больше информации об этом мороженом" href="#">Быстрый просмотр</a>
@@ -313,7 +327,8 @@
         <li class="catalog-item">
           <h3 class="catalog-item-title"><a href="#">Сливочно-лимонное с карамельной присыпкой</a></h3>
           <div class="item-image-price">
-            <img class="item-pic" src="img/catalog/icecream_lemon.png" width="267" height="267" alt="Фото мороженого: сливочно-лимонное">
+            <img class="item-pic" src="img/catalog/icecream_lemon.png" width="267" height="267"
+              alt="Фото мороженого: сливочно-лимонное">
             <p>315 &#8381;<span class="kilo">/кг</span></p>
           </div>
           <a class="btn quick-view" aria-label="Больше информации об этом мороженом" href="#">Быстрый просмотр</a>
@@ -321,7 +336,8 @@
         <li class="catalog-item">
           <h3 class="catalog-item-title"><a href="#">Сливочное с&nbsp;шоколадной стружкой</a></h3>
           <div class="item-image-price">
-            <img class="item-pic" src="img/catalog/icecream_chocolatechips.png" width="267" height="267" alt="Фото мороженого: сливочное с шоколадной стружкой">
+            <img class="item-pic" src="img/catalog/icecream_chocolatechips.png" width="267" height="267"
+              alt="Фото мороженого: сливочное с шоколадной стружкой">
             <p>320 &#8381;<span class="kilo">/кг</span></p>
           </div>
           <a class="btn quick-view" aria-label="Больше информации об этом мороженом" href="#">Быстрый просмотр</a>
@@ -329,7 +345,8 @@
         <li class="catalog-item">
           <h3 class="catalog-item-title"><a href="#">Сливочно-ванильное<br> с&nbsp;кусочками шоколада</a></h3>
           <div class="item-image-price">
-            <img class="item-pic" src="img/catalog/icecream_vanil.png" width="267" height="267" alt="Фото мороженого: сливочно-ванильное с кусочками шоколада">
+            <img class="item-pic" src="img/catalog/icecream_vanil.png" width="267" height="267"
+              alt="Фото мороженого: сливочно-ванильное с кусочками шоколада">
             <p>440 &#8381;<span class="kilo">/кг</span></p>
           </div>
           <a class="btn quick-view" aria-label="Больше информации об этом мороженом" href="#">Быстрый просмотр</a>
@@ -337,7 +354,8 @@
         <li class="catalog-item">
           <h3 class="catalog-item-title"><a href="#">Сливочноe с&nbsp;ментоловым сиропом</a></h3>
           <div class="item-image-price">
-            <img class="item-pic" src="img/catalog/icecream_mentol.png" width="267" height="267" alt="Фото мороженого: сливочноe с ментоловым сиропом">
+            <img class="item-pic" src="img/catalog/icecream_mentol.png" width="267" height="267"
+              alt="Фото мороженого: сливочноe с ментоловым сиропом">
             <p>435 &#8381;<span class="kilo">/кг</span></p>
           </div>
           <a class="btn quick-view" aria-label="Больше информации об этом мороженом" href="#">Быстрый просмотр</a>
@@ -345,7 +363,8 @@
         <li class="catalog-item">
           <h3 class="catalog-item-title"><a href="#">Сливочное с&nbsp;кусочками черного шоколада</a></h3>
           <div class="item-image-price">
-            <img class="item-pic" src="img/catalog/icecream_blackchocolate.png" width="267" height="267" alt="Фото мороженого: сливочное с кусочками черного шоколада">
+            <img class="item-pic" src="img/catalog/icecream_blackchocolate.png" width="267" height="267"
+              alt="Фото мороженого: сливочное с кусочками черного шоколада">
             <p>355 &#8381;<span class="kilo">/кг</span></p>
           </div>
           <a class="btn quick-view" aria-label="Больше информации об этом мороженом" href="#">Быстрый просмотр</a>
@@ -353,7 +372,8 @@
         <li class="catalog-item">
           <h3 class="catalog-item-title"><a href="#">Сливочное с&nbsp;мятным сиропом</a></h3>
           <div class="item-image-price">
-            <img class="item-pic" src="img/catalog/icecream_mint.png" width="267" height="267" alt="Фото мороженого: сливочное с мятным сиропом">
+            <img class="item-pic" src="img/catalog/icecream_mint.png" width="267" height="267"
+              alt="Фото мороженого: сливочное с мятным сиропом">
             <p>420 &#8381;<span class="kilo">/кг</span></p>
           </div>
           <a class="btn quick-view" aria-label="Больше информации об этом мороженом" href="#">Быстрый просмотр</a>
@@ -363,6 +383,9 @@
         <li>
           <a class="pagination-icon previous disabled" href="#">
             <span class="visually-hidden">предыдущие страницы</span>
+            <svg class="svg-rotated" aria-hidden="true" focusable="false" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.84111 5.65875L0.932395 0.148752C0.829699 0.05349 0.690626 0 0.545642 0C0.400659 0 0.261586 0.05349 0.15889 0.148752C0.108543 0.195234 0.0685817 0.250534 0.041311 0.311464C0.0140403 0.372393 0 0.437746 0 0.503752C0 0.569758 0.0140403 0.635111 0.041311 0.69604C0.0685817 0.75697 0.108543 0.812271 0.15889 0.858752L5.6916 5.99875L0.15889 11.1688C0.108543 11.2152 0.0685817 11.2705 0.041311 11.3315C0.0140403 11.3924 0 11.4577 0 11.5238C0 11.5898 0.0140403 11.6551 0.041311 11.716C0.0685817 11.777 0.108543 11.8323 0.15889 11.8788C0.266426 11.9636 0.404942 12.0065 0.545642 11.9988C0.616091 11.9996 0.68594 11.9866 0.750698 11.9608C0.815455 11.935 0.873688 11.8968 0.921651 11.8488L6.84111 6.36875C6.89146 6.32227 6.93142 6.26697 6.95869 6.20604C6.98596 6.14511 7 6.07976 7 6.01375C7 5.94775 6.98596 5.88239 6.95869 5.82146C6.93142 5.76053 6.89146 5.70523 6.84111 5.65875Z" fill="white"/>
+            </svg>
           </a>
         </li>
         <li class="pagination-item">
@@ -383,6 +406,12 @@
         <li>
           <a class="pagination-icon next" href="#">
             <span class="visually-hidden">следующие страницы</span>
+            <svg aria-hidden="true" focusable="false" width="7" height="12" viewBox="0 0 7 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6.84111 5.65875L0.932395 0.148752C0.829699 0.05349 0.690626 0 0.545642 0C0.400659 0 0.261586 0.05349 0.15889 0.148752C0.108543 0.195234 0.0685817 0.250534 0.041311 0.311464C0.0140403 0.372393 0 0.437746 0 0.503752C0 0.569758 0.0140403 0.635111 0.041311 0.69604C0.0685817 0.75697 0.108543 0.812271 0.15889 0.858752L5.6916 5.99875L0.15889 11.1688C0.108543 11.2152 0.0685817 11.2705 0.041311 11.3315C0.0140403 11.3924 0 11.4577 0 11.5238C0 11.5898 0.0140403 11.6551 0.041311 11.716C0.0685817 11.777 0.108543 11.8323 0.15889 11.8788C0.266426 11.9636 0.404942 12.0065 0.545642 11.9988C0.616091 11.9996 0.68594 11.9866 0.750698 11.9608C0.815455 11.935 0.873688 11.8968 0.921651 11.8488L6.84111 6.36875C6.89146 6.32227 6.93142 6.26697 6.95869 6.20604C6.98596 6.14511 7 6.07976 7 6.01375C7 5.94775 6.98596 5.88239 6.95869 5.82146C6.93142 5.76053 6.89146 5.70523 6.84111 5.65875Z"
+                fill="white" />
+            </svg>
           </a>
         </li>
       </ul>
