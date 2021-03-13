@@ -18,6 +18,9 @@ const background = document.querySelector(".page-body");
 const slideOne = document.querySelector(".slide-1");
 const slideTwo = document.querySelector(".slide-2");
 const slideThree = document.querySelector(".slide-3");
+const textOne = document.querySelector(".slider-title-1")
+const textTwo = document.querySelector(".slider-title-2")
+const textThree = document.querySelector(".slider-title-3")
 
 // feedback form
 
@@ -79,7 +82,7 @@ window.addEventListener("keydown", function(evt) {
   }
 });
 
-// slides change
+// slides
 
 buttonOne.addEventListener("click", function(evt) {
   if (buttonOne.classList.contains("current")) {
@@ -87,13 +90,16 @@ buttonOne.addEventListener("click", function(evt) {
   } else {
     buttonOne.classList.add("current");
     background.classList.add("bg-1");
-    slideOne.classList.add("current");
+    slideOne.classList.add("current-slide");
+    textOne.classList.add("slider-title-1");
     buttonTwo.classList.remove("current");
     background.classList.remove("bg-2");
-    slideTwo.classList.remove("current");
+    slideTwo.classList.remove("current-slide");
+    textTwo.classList.remove("slider-title-2");
     buttonThree.classList.remove("current");
     background.classList.remove("bg-3");
-    slideThree.classList.remove("current");
+    slideThree.classList.remove("current-slide");
+    textThree.classList.remove("slider-title-3");
   }
 });
 
@@ -103,13 +109,16 @@ buttonTwo.addEventListener("click", function(evt) {
   } else {
     buttonTwo.classList.add("current");
     background.classList.add("bg-2");
-    slideTwo.classList.add("current");
+    slideTwo.classList.add("current-slide");
+    textTwo.classList.remove("slider-title-2");
     buttonOne.classList.remove("current");
     background.classList.remove("bg-1");
-    slideOne.classList.remove("current");
+    slideOne.classList.remove("current-slide");
+    textOne.classList.add("slider-title-1");
     buttonThree.classList.remove("current");
     background.classList.remove("bg-3");
-    slideThree.classList.remove("current");
+    slideThree.classList.remove("current-slide");
+    textThree.classList.remove("slider-title-3");
   }
 });
 
@@ -119,12 +128,15 @@ buttonThree.addEventListener("click", function(evt) {
   } else {
     buttonThree.classList.add("current");
     background.classList.add("bg-3");
-    slideThree.classList.add("current");
+    slideThree.classList.add("current-slide");
+    textThree.classList.remove("slider-title-3");
     buttonOne.classList.remove("current");
     background.classList.remove("bg-1");
-    slideOne.classList.remove("current");
+    slideOne.classList.remove("current-slide");
+    textOne.classList.add("slider-title-1");
     buttonTwo.classList.remove("current");
     background.classList.remove("bg-2");
-    slideTwo.classList.remove("current");
+    slideTwo.classList.remove("current-slide");
+    textTwo.classList.remove("slider-title-2");
   }
 });

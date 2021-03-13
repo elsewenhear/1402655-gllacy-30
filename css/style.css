@@ -201,7 +201,11 @@ legend {
   box-shadow: 0 20px 20px 0 var(--basic-black-40);
 }
 
-.input[type="text"], .input[type="email"], .input[type="password"], .input[type="search"], .input-textarea {
+.input[type="text"], 
+.input[type="email"], 
+.input[type="password"], 
+.input[type="search"], 
+.input-textarea {
   font: inherit;
   font-weight: 700;
   line-height: 20px;
@@ -229,7 +233,17 @@ legend {
 
 /* отключение списка */
 
-.site-navigation, .info-list, .footer-social-list, .user-navigation, .slider-list, .offers-list, .user-navigation-list, .main-navigation-list, .advantages-list, .hit-list, .pagination-list {
+.site-navigation, 
+.info-list, 
+.footer-social-list, 
+.user-navigation, 
+.slider-list, 
+.offers-list, 
+.user-navigation-list, 
+.main-navigation-list, 
+.advantages-list, 
+.hit-list, 
+.pagination-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -340,7 +354,8 @@ legend {
   bottom: -20px;
 }
 
-.catalog-link:hover .catalog-navigation, .catalog-link:focus-within .catalog-navigation {
+.catalog-link:hover .catalog-navigation, 
+.catalog-link:focus-within .catalog-navigation {
   visibility: visible;
 }
 
@@ -465,7 +480,9 @@ legend {
   margin-left: 8px;
 }
 
-.form-search .input-search, .form-login .input-password, .form-login .input-login {
+.form-search .input-search, 
+.form-login .input-password, 
+.form-login .input-login {
   font-size: 14px;
   line-height: 16px;
   padding: 14px;
@@ -507,7 +524,8 @@ legend {
   z-index: 8;
 }
 
-.search:hover .form-search, .search:focus-within .form-search {
+.search:hover .form-search, 
+.search:focus-within .form-search {
   visibility: visible;
 }
 
@@ -545,7 +563,8 @@ legend {
   width: 208px;
 }
 
-.login:hover .form-login, .login:focus-within .form-login {
+.login:hover .form-login, 
+.login:focus-within .form-login {
   visibility: visible;
 }
 
@@ -607,7 +626,8 @@ legend {
   z-index: 8;
 }
 
-.cart:hover .form-cart, .cart:focus-within .form-cart {
+.cart:hover .form-cart, 
+.cart:focus-within .form-cart {
   visibility: visible;
 }
 
@@ -756,7 +776,9 @@ legend {
   display: block;
 }
 
-.slider-title {
+.slider-title-1,
+.slider-title-2,
+.slider-title-3 {
   font-weight: 700;
   font-size: 60px;
   line-height: 60px;
@@ -1176,7 +1198,9 @@ legend {
 
 .contacts-container {
   height: 420px;
+  width: 1146px;
   margin: 0 auto;
+  padding: 0 27px;
   display: flex;
   background-image: url(../img/index/map_and_pin.png);
   background-repeat: no-repeat;
@@ -1188,9 +1212,8 @@ legend {
   border-radius: 19px;
   margin-left: auto;
   align-self: center;
-  padding: 32px 28px 32px 28px;
+  padding: 32px 0px 32px 25px;
   margin-top: 73px;
-  margin-right: 24px;
   margin-bottom: 67px;
   z-index: 2;
 }
@@ -1232,15 +1255,14 @@ legend {
 
 .contacts .btn {
   display: block;
-  padding: 10px 18px;
+  padding: 10px 28px;
   margin-top: 7px;
-  align-self: stretch;
 }
 
 /*  contacts  */
 
 .contacts {
-  width: 253px;
+  width: 278px;
   height: 242px;
   color: var(--basic-dark);
   background-color: var(--additional-light);
