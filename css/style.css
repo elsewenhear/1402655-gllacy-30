@@ -772,13 +772,11 @@ legend {
   display: none;
 }
 
-.slider-item.slide-current {
+.slider-item.current-slide {
   display: block;
 }
 
-.slider-title-1,
-.slider-title-2,
-.slider-title-3 {
+.current-slide h3 {
   font-weight: 700;
   font-size: 60px;
   line-height: 60px;
