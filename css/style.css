@@ -265,7 +265,7 @@ legend {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   width: 600px;
 }
 
@@ -636,6 +636,7 @@ legend {
   margin-bottom: 13px;
   margin-top: -1px;
   margin-left: 1px;
+  width: 100%;
 }
 
 .cart-item td {
@@ -751,6 +752,7 @@ legend {
   left: 0;
   z-index: 20;
   display: flex;
+  padding-left: 27px;
 }
 
 .slider-item {
@@ -771,21 +773,21 @@ legend {
 
 .bg-1 {
   background-color: var(--background-1);
-  background-image: url(./../img/index/icecream_carousel_1.png);
+  background-image: url("./../img/index/icecream_carousel_1.png");
   background-position: top center;
   background-repeat: no-repeat;
 }
 
 .bg-2 {
   background-color: var(--background-2);
-  background-image: url(./../img/index/icecream_carousel_2.png);
+  background-image: url("./../img/index/icecream_carousel_2.png");
   background-position: top center;
   background-repeat: no-repeat;
 }
 
 .bg-3 {
   background-color: var(--background-3);
-  background-image: url(./../img/index/icecream_carousel_3.png);
+  background-image: url("./../img/index/icecream_carousel_3.png");
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -826,10 +828,10 @@ legend {
 
 .promo-item {
   border-radius: 16px;
-  padding: 12px 22px 22px 16px;
+  padding: 12px 22px 20px 16px;
   display: flex;
   flex-direction: column;
-  padding-left: 18px;
+  padding-left: 16px;
 }
 
 .promo-item h3 {
@@ -857,16 +859,16 @@ legend {
 
 .promo-chocolate {
   background-color: var(--chocolate-background);
-  background-image: url(../img/index/chocolate.png);
+  background-image: url("../img/index/chocolate_background.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .promo-raspberry {
   background-color: var(--raspberry-background);
-  background-image: url(../img/index/malina.png);
+  background-image: url("../img/index/malina_background.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 /* Catalog */
@@ -924,7 +926,7 @@ legend {
 
 .catalog-item-title {
   margin: 0;
-  margin-top: 4px;
+  margin-top: 7px;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -1018,7 +1020,7 @@ legend {
   max-width: 1146px;
   max-height: 306px;
   color: var(--basic-dark);
-  background-image: url('../img/index/pattern_waffle.png');
+  background-image: url("../img/index/pattern.jpg");
   background-color: var(--waffle-background);
   border-radius: 16px;
   padding: 26px 0px 29px 0px;
@@ -1034,7 +1036,7 @@ legend {
 .advantages-item {
   position: relative;
   padding-left: 55px;
-  padding-top: 13px;
+  padding-top: 11px;
 }
 
 .advantages-item::before {
@@ -1052,7 +1054,7 @@ legend {
   font-size: 24px;
   line-height: 30px;
   margin: 0;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   margin-top: 2px;
   margin-left: 21px;
 }
@@ -1085,7 +1087,7 @@ legend {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 26px;
-  margin-top: 40px;
+  margin-top: 43px;
   margin-bottom: 40px;
   min-height: 221px;
 }
@@ -1096,7 +1098,7 @@ legend {
 .blog-article {
   color: var(--basic-dark);
   background-color: var(--special-blog-background);
-  background-image: url(../img/index/strawberry.png);
+  background-image: url("../img/index/strawberry_background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
@@ -1169,7 +1171,7 @@ legend {
 /* map */
 
 .map {
-  margin-top: 37px;
+  margin-top: 43px;
   margin-bottom: -15px;
   position: relative;
 }
@@ -1177,6 +1179,7 @@ legend {
   width: 100%;
   height: 424px;
   position: absolute;
+  border: none;
 }
 
 .contacts-container {
@@ -1209,7 +1212,7 @@ legend {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: -4px;
+  margin-top: -6px;
 }
 
 .contacts-info p {
